@@ -2,7 +2,7 @@ package lectureTwo.arrays;
 
 import org.apache.log4j.Logger;
 
-
+//**********@Checked***************//
 import java.util.Arrays;
 
 public class ArraysDemoAdv {
