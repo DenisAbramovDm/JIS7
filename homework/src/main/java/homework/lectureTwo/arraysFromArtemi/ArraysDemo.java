@@ -1,6 +1,5 @@
-package lectureTwo.arrays;
+package homework.lectureTwo.arraysFromArtemi;
 //**********@Checked***************//
-import lectureOne.mathOperations.MathOperationsDemo;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
 import java.util.Arrays;
