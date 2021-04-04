@@ -1,4 +1,4 @@
-package homework.lectureTwo.arraysFromArtemi;
+package homework.lecturetwo.arraysfromartemi;
 
 import org.apache.log4j.Logger;
 

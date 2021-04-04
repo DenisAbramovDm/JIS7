@@ -1,4 +1,4 @@
-package homework.lectureTwo.arraysFromArtemi;
+package homework.lecturetwo.arraysfromartemi;
 //**********@Checked***************//
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
