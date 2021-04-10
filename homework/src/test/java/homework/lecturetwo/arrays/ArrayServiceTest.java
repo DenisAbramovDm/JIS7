@@ -41,4 +41,24 @@ class ArrayServiceTest {
         myArr.fillRandomly(arr);
         System.out.println(myArr.avg(arr));
     }
+
+    @Test
+    void sortTest() {
+        myArr.fillRandomly(arr);
+     int[]  arrForTest = arr;
+     int[] expectedArray = Arrays.copyOf(arrForTest, arrForTest.length);
+        Arrays.sort(expectedArray);
+        myArr.sort(arrForTest);
+        assertArrayEquals(expectedArray, arrForTest);
+
+    }
+
+    @Test
+    void swapTest() {
+        myArr.fillRandomly(arr);
+        myArr.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        myArr.swap(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 }

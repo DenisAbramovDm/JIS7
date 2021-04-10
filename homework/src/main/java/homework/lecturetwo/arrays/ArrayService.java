@@ -38,4 +38,28 @@ public class ArrayService {
             return  average;
         } else return 0;
     }
+
+    public void sort(int[] array) {
+        int gap = array.length / 2;
+        while (gap >= 1) {
+            for (int right = 0; right < array.length; right++) {
+                for (int c = right - gap; c >= 0; c -= gap) {
+                    if (array[c] > array[c + gap]) {
+                        int tmp = array[c];
+                        array[c] = array[c + gap];
+                        array[c + gap] = tmp;
+                    }
+                }
+            }
+            gap = gap / 2;
+        }
+    }
+    public void swap(int[] array){
+        int temp = 0;
+        for (int i = 0; i < (array.length/2); i++){
+            temp = array[i];
+            array[i] = array[array.length - (i + 1)];
+            array[array.length - (i + 1)] = temp;
+        }
+    }
 }
