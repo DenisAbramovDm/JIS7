@@ -25,5 +25,5 @@ hs_err_pid*
 ####
 .idea/
 
-/task1_calc.iml
 /target/
+homework/homework.iml
