@@ -17,10 +17,12 @@ public class Product {
 
     }
     void printInformation(){
-        log.info("Product : name = \"" + name +"\"" +
-                "\nregular price = " + regularPrice + " BYN" +
-                "\ndiscount = " + discount + "%" +
-                "\nactual price = " + String.format("%.2f", this.actualPrice()) + " BYN");
+
+        log.info(String.format("Product : name = \"%s\"" +
+                "%nregular price = %s BYN" +
+                "%ndiscount = %s%%" +
+                "%nactual price = %.2f BYN", this.name, this.regularPrice, this.discount, this.actualPrice()));
+
     }
 
     public void setRegularPrice(double regularPrice) {
