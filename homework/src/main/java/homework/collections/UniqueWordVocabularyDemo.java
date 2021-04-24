@@ -8,6 +8,9 @@ public class UniqueWordVocabularyDemo {
         vocabulary.addWord("bax");
         vocabulary.addWord("");
         vocabulary.addWord("wax");
+        vocabulary.addWord("   ");
+        vocabulary.addWord("wax");
+        vocabulary.addWord(null);
         System.out.println(vocabulary.getWordsCount());
         vocabulary.printVocabulary();
     }

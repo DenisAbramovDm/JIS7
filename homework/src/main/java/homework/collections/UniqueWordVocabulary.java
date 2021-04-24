@@ -7,7 +7,7 @@ public class UniqueWordVocabulary {
     Set<String> vocabulary = new HashSet<>();
 
     void addWord(String word) {
-        if (word != "") {
+        if (word != null && ! word.isBlank()) {
             vocabulary.add(word);
         }
     }
