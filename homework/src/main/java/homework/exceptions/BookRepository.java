@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import homework.exceptions.Book;
 
 public class BookRepository implements Repository<Book> {
     Map<String, Book> repository = new HashMap<>();
@@ -16,18 +15,18 @@ public class BookRepository implements Repository<Book> {
     }
 
     @Override
-    public Book findById(String id) throws ItemNotFoundException {
-        Book book = null;
+    public Book findById(String id){
+        boolean itemWasFound = false;
         for (Map.Entry<String, Book> entry :
                 repository.entrySet()) {
-            if (entry.getValue().getId().equals(id)) {
-                book = entry.getValue();
+            if (entry.getKey().equals(id)) {
+                itemWasFound = true;
             }
         }
-        if (book == null) {
-            throw new ItemNotFoundException("Id is not found");
-        }
-        return book;
+        if (itemWasFound) {
+            return repository.get(id);
+        } else throw new ItemNotFoundException("Id is not found");
+
     }
 
 
@@ -38,7 +37,7 @@ public class BookRepository implements Repository<Book> {
     }
 
     @Override
-    public void delete(String id) throws ItemNotFoundException {
+    public void delete(String id) {
         boolean bookWasRemoved = false;
         for (Map.Entry<String, Book> entry :
                 repository.entrySet()) {
