@@ -25,17 +25,24 @@ public class Shop {
       shop.remove(product);
   }
 
-  public Product findProductWithName(String name){
-      Product productForReturn = null;
+  public Product findProductByName(String name){
+      boolean itemWasFound = false;
+      Product productForReturn = new Product();
       for (Product product :
               shop) {
           if (product.getProductName().equals(name)){
               productForReturn = product;
+              itemWasFound = true;
           }
-      }return productForReturn;
+      }
+      if (itemWasFound){
+          return productForReturn;}
+      else{
+          throw new ItemNotFoundException("Product was not found");
+      }
   }
 
-  public ArrayList<Product> findProductsWithPriceRange(BigDecimal leftValue, BigDecimal rightValue){
+  public ArrayList<Product> findProductsBetweenPriceRange(BigDecimal leftValue, BigDecimal rightValue){
       ArrayList<Product> listOfProducts= new ArrayList<>();
       for (Product product :
               shop) {

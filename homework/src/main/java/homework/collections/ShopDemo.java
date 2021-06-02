@@ -18,7 +18,7 @@ public class ShopDemo {
         shop.addProduct(mama);
 
 
-        System.out.println(shop.findProductsWithPriceRange(BigDecimal.valueOf(50), BigDecimal.valueOf(200)));
+        System.out.println(shop.findProductsBetweenPriceRange(BigDecimal.valueOf(50), BigDecimal.valueOf(200)));
 
     }
 }

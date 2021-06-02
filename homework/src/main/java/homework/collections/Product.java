@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Product {
-    private final String productName;
-    private final BigDecimal productPrice;
+    private String productName;
+    private BigDecimal productPrice;
 
     public Product(String productName, BigDecimal productPrice) {
         if (!productName.isBlank()) {
@@ -15,6 +15,10 @@ public class Product {
             this.productName = "default";
             this.productPrice = BigDecimal.ZERO;
         }
+    }
+
+    public Product() {
+
     }
 
     public String getProductName() {
