@@ -1,22 +1,28 @@
 package homework.hospital.model;
 
-public enum TimeSet {
-    FIRST("08:00"),
-    SECOND("08:30"),
-    THIRD("09:00"),
-    FOURTH("09:30"),
-    FIFTH("10:00"),
-    SIXTH("10:30"),
-    SEVENTH("11:00"),
-    EIGHTH("11:30");
-    private String time;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-    TimeSet(String time) {
-        this.time = time;
+public class TimeSet {
+    public Map<Times, Object> timeSetUserMap =
+            Stream.of(new Object[][]{
+                    {Times.FIRST, "Empty"},
+                    {Times.SECOND, "Empty"},
+                    {Times.THIRD, "Empty"},
+                    {Times.FOURTH, "Empty"},
+                    {Times.FIFTH, "Empty"},
+                    {Times.SIXTH, "Empty"},
+                    {Times.SEVENTH, "Empty"},
+                    {Times.EIGHTH, "Empty"},})
+                    .collect(Collectors.toMap(data ->
+                            (Times) data[0], data -> data[1]));
+
+    public void setUser(Times time, User user){
+        timeSetUserMap.put(time, user);
     }
-
-    public String getTime() {
-        return time;
+    public Object getUser(Times time){
+        return timeSetUserMap.get(time);
     }
-
 }
+

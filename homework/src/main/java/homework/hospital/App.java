@@ -1,9 +1,14 @@
 package homework.hospital;
 
-import homework.hospital.model.Doctor;
+import homework.hospital.model.DaysOfWeek;
+import homework.hospital.model.Times;
+import homework.hospital.repository.Doctors;
+import homework.hospital.service.UserService;
 
 public class App {
     public static void main(String[] args) {
-        Doctor doctor = new Doctor();
+        Doctors.initializeDoctors();
+        UserService.appointment("valera", "urolog", DaysOfWeek.SUNDAY, Times.FIFTH);
+
     }
 }
