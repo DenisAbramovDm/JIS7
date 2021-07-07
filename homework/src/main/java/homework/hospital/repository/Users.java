@@ -8,3 +8,5 @@ import java.util.Map;
 public class Users {
     public static Map<String, User> users = new HashMap<>();
 }
+
+

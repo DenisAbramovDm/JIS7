@@ -6,13 +6,11 @@ import java.util.List;
 
 public class User {
     private final String userName;
-    private final String name;
     private int quantityOfPayedVisits;
     private List<Record> records;
 
-    public User(String username, String name) {
+    public User(String username) {
         this.userName = username;
-        this.name = name;
         this.quantityOfPayedVisits = 0;
     }
 
@@ -24,9 +22,7 @@ public class User {
         this.records.add(record);
     }
 
-    public String getName(){
-        return this.name;
-    }
+
 
     public String getUserName() {
         return userName;
