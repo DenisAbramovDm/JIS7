@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 public class Product {
     private String name;
     private double price;
-    private int discount;
+    private Integer discount;
     private double priceWithDiscount;
 
-    public Product(String name, double price, int discount) {
+    public Product(String name, double price, Integer discount) {
         this.name = name;
         this.price = price;
         this.discount = discount;

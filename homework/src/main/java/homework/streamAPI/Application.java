@@ -4,7 +4,7 @@ import homework.streamAPI.model.Product;
 
 import java.util.List;
 
-import static homework.streamAPI.service.ProductService.findProductWithDiscount;
+import static homework.streamAPI.service.ProductService.*;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,6 +20,8 @@ public class Application {
                 new Product("Chicken", 9.2, 0));
 
         findProductWithDiscount(products);
+        findTheMostExpensiveProductWithoutDiscount(products);
+        findTheCheapestProductWithTheHighestDiscount(products);
 
     }
 }
