@@ -19,4 +19,5 @@ public class Product {
         this.discount = discount;
         priceWithDiscount = price - (price * discount / 100);
     }
+
 }
